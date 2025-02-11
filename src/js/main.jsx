@@ -8,11 +8,15 @@ import "bootstrap"
 // index.css'
 import '../styles/index.css'
 
+//importar FontAwesome
+import 'https://kit.fontawesome.com/072e5df971.js'
+
 // components
-import Home from './components/Home';
+//import Home from './components/Home';
+import SecondsCounter from './components/SecondsCounter';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home/>
+    <SecondsCounter seconds={10} />
   </React.StrictMode>,
 )
