@@ -14,9 +14,11 @@ import 'https://kit.fontawesome.com/072e5df971.js'
 // components
 //import Home from './components/Home';
 import SecondsCounter from './components/SecondsCounter';
+import SecondsCounter2 from './components/SecondsCounter2';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <SecondsCounter seconds={10} />
+    <SecondsCounter seconds={3434} />
+    <SecondsCounter2 seconds={50} />
   </React.StrictMode>,
 )

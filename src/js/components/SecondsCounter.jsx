@@ -1,31 +1,34 @@
 //importar React
 import React from 'react'
-import 'https://kit.fontawesome.com/072e5df971.js'
+
 
 //Declarar la función donde se activa la propiedad props
 const SecondsCounter = (props) => {
 
     //Declaro variables para el contador
     let segundos = 0;
-    let intervalo;
 
-    //Declara la variable para cambiar la longitud a 4 ceros
+    //Declara la variable para cambiar la longitud a 4 ceros 
     const formatoTiempo = (num) => {return num.toString().padStart(4, '0')};
 
     //funcion para activar el contador
     function inicio() {
-    
-        if (segundos <= props.seconds) {
-            intervalo = setInterval(() => {
+        
+        const intervalo = setInterval(() => {
+            if (segundos === props.seconds) {
+                clearInterval(intervalo);
+                console.log("Contador 1: Ya finalicé.");
+                return;
+            } else {
                 segundos++;
+                console.log("Contador 1: "+segundos);
                 document.querySelector('#cuenta').innerHTML = formatoTiempo(segundos);
-            }, 1000);
-        } else {
-            clearInterval(intervalo);
-        }
-
+            }
+        }, 1000);
+        
     }
 
+    //Llamamos a la función
     inicio();
 
     //Devuelve el contenido del contador
