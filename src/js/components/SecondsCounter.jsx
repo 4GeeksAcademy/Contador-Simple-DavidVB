@@ -33,7 +33,7 @@ const SecondsCounter = (props) => {
 
     //Devuelve el contenido del contador
     return (
-        <div className='col-12 col-md-6 col-lg-3'>
+        <div className='col-12 col-md-6 col-lg-3 text-center'>
             <h1>Contador simple</h1>
             <p>Segundos declarados: {props.seconds} </p>
             <p>Contando:  

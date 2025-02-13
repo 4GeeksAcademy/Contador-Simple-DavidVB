@@ -35,11 +35,11 @@ const SecondsCounter2 = (props) => {
 
     //Devuelve el contenido del contador
     return (
-        <div className='col-12 col-md-6 col-lg-3'>
+        <div className='col-12 col-md-6 col-lg-3 text-center'>
             <h1>Contador regresivo</h1>
             <p>Segundos declarados: {props.seconds} </p>
             <p>Contando:  
-                <i className="fa-regular fa-clock"></i>  
+                <i class="fa-light fa-clock"></i>
                 <span id="cuenta2">{ formatoTiempo(segundos) }</span>
             </p>
         </div>
